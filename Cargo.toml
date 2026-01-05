@@ -1,7 +1,7 @@
 [package]
 name = "get-livecaptions"
-version = "0.1.0"
-edition = "2021"
+version = "0.2.260106"
+edition = "2024"
 authors = ["corbamico@163.com"]
 license = "MIT OR Apache-2.0"
 
@@ -14,13 +14,16 @@ clap = { version = "4.5", features = ["derive"] }
 log = "0.4"
 env_logger = "0.11"
 anyhow = "1"
+libretranslate = "0.5"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies.windows]
-version="0.56"
+version="0.62.2"
 features = [
     "Win32_System_Com",
+    "Win32_System_Variant",
+    "Win32_System_Ole",
     "Win32_UI_Accessibility",
     "Win32_System_DataExchange",
     "Win32_UI_WindowsAndMessaging",
