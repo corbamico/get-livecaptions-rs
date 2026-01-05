@@ -1,6 +1,8 @@
 # get-livecaptions-rs
 Get real time content of Windows System APP "Live Captions" [win+ctrl+L], write content into file. using rust, windows-rs
 
+translate API use [libretranslate](https://github.com/libretranslate/libretranslate)  
+
 check slibing project [get-livecaptions-cpp](https://github.com/corbamico/get-livecaptions-cpp)
 
 ## Usage
@@ -9,10 +11,16 @@ check slibing project [get-livecaptions-cpp](https://github.com/corbamico/get-li
 Usage: get-livecaptions.exe [OPTIONS] --file <FILE>
 
 Options:
-  -f, --file <FILE>          Name of the file to output
-  -i, --interval <INTERVAL>  interval of minutes for one cycle [default: 3]
-  -h, --help                 Print help
-  -V, --version              Print version
+  -f, --file <FILE>
+          Name of the file to output
+      --translate <TRANSLATE>
+          Enable translation from source language to English [possible values: ar, zh, fr, de, it, ja, pt, ru, es, pl]
+      --translate-host <TRANSLATE_HOST>
+          LibreTranslate server host [default: http://127.0.0.1:5000]
+  -h, --help
+          Print help
+  -V, --version
+          Print version
 ```
 
 ## UIAutomation
